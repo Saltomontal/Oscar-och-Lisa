@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSA - Vårt Bröllop</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="önskelista.html">Önskelista</a></li>
+                <li><a href="om-kraksjö-vastergard.html">Om Kråksjö Västergård</a></li>
+                <li><a href="osa.html">OSA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>OSA</h1>
+        <p>Vänligen meddela oss om du kommer att närvara vid vårt bröllop.</p>
+        <form action="https://formspree.io/f/[din-formspree-id]" method="POST">
+            <label for="namn">Namn:</label>
+            <input type="text" id="namn" name="namn" required>
+
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="_replyto" required>
+
+            <label for="antal">Antal personer:</label>
+            <input type="number" id="antal" name="antal" min="1" required>
+
+            <label for="kommentar">Kommentar:</label>
+            <textarea id="kommentar" name="kommentar"></textarea>
+
+            <button type="submit">Skicka</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 [Era Namn]. Alla rättigheter förbehållna.</p>
+    </footer>
+</body>
+</html>
