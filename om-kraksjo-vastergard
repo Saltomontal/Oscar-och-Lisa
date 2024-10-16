@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Kråksjö Västergård - Vårt Bröllop</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="önskelista.html">Önskelista</a></li>
+                <li><a href="om-kraksjö-vastergard.html">Om Kråksjö Västergård</a></li>
+                <li><a href="osa.html">OSA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Om Kråksjö Västergård</h1>
+        <p>Kråksjö Västergård är den vackra platsen där vi kommer att fira vårt bröllop. Här är lite information om platsen:</p>
+        <h2>Historia</h2>
+        <p>[Beskrivning av platsens historia]</p>
+        <h2>Faciliteter</h2>
+        <p>[Beskrivning av faciliteter och vad som erbjuds]</p>
+        <h2>Fotogalleri</h2>
+        <div class="gallery">
+            <img src="images/om1.jpg" alt="Bild 1">
+            <img src="images/om2.jpg" alt="Bild 2">
+            <!-- Lägg till fler bilder här -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 [Era Namn]. Alla rättigheter förbehållna.</p>
+    </footer>
+</body>
+</html>
