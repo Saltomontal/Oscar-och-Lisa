@@ -90,3 +90,21 @@ form button {
 form button:hover {
     background-color: #0056b3;
 }
+
+/* Lägg till detta i css/styles.css */
+
+/* Stil för OSA-knappen */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blå färg, ändra vid behov */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Mörkare blå vid hovring */
+}
