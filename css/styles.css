@@ -36,7 +36,7 @@ nav ul li a:hover {
 
 .hero {
     position: relative;
-    background-image: url('images/bakgrund.jpg');
+    background-image: url('../images/bakgrund.jpg');
     background-size: cover; /* Gör så att bilden täcker hela sektionen */
     background-position: center; /* Centrerar bilden */
     height: 60vh; /* Justera höjden efter behov */
