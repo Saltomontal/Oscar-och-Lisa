@@ -1,15 +1,63 @@
 /* css/styles.css */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', sans-serif;
     margin: 0;
     padding: 0;
 }
 
+h1, h2, h3, p {
+    padding-left: 40px; /* Förskjuter texten inåt från vänster */
+    padding-right: 40px; /* Förskjuter texten inåt från höger */
+    text-align: justify; /* Justerar texten så att den fyller hela radens bredd */
+}
+
+@media (max-width: 768px) {
+    h1, h2, h3, p {
+        padding-left: 20px; /* Mindre förskjutning på mindre skärmar */
+        padding-right: 20px;
+    }
+}
+
+h1 { 
+font-size: 28px;
+font-family: 'Times New Roman', Times, serif;
+color: #050000;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #050000;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 16px; /* Standardtextstorlek för paragrafer */
+    color: #050000; /* En mjukare färg för text */
+    line-height: 1.6; /* Ökar radavstånd för bättre läsbarhet */
+}
+
+/* Stilar för länkar */
+a {
+    font-size: 16px; /* Standard länkstorlek */
+    color: #2b5035; 
+    text-decoration: none; /* Ta bort understrykning */
+}
+
+a:hover {
+    text-decoration: underline; /* Understrykning när man hovrar över länken */
+    color: #85bd93; /* Ändra färg när man hovrar */
+}
+
 header {
-    background-color: #f8f8f8;
+    background: linear-gradient(90deg, #7D9A7A, #A3B5A2 );
     padding: 20px 0;
     border-bottom: 1px solid #e7e7e7;
+    color: #FFFFFF;
 }
 
 nav ul {
@@ -26,12 +74,108 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #a94a85;
+    color: #486850;
+}
+
+.content-container {
+    padding-right: 40px; /* Ger lite utrymme för att texten inte ska ligga för nära högerkanten */
+}
+
+.gallery img {
+    max-width: 100%;  /* Gör bilden responsiv */
+    height: auto;     /* Bevarar proportionerna */
+    display: block;
+    margin: 0 auto;   /* Centrerar bilden om ingen float används */
+}
+
+.right-image {
+    float: right;       /* Flyttar bilden till höger om texten */
+    margin-right: 200px; /* Skapar en fast marginal på 40px från höger */
+    margin-left: 20px;  /* Skapar avstånd mellan texten och bilden */
+    width: 70%;         /* Sätter bildens bredd till 40% av föräldrarnas bredd */
+    height: auto;       /* Bevarar bildens proportioner */
+}
+
+.float-right-image {
+    float: right;       /* Gör att bilden flyter till höger */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 0 15px 15px; /* Lägger en marginal mellan texten och bilden */
+    width: 300px;       /* Justera bildens bredd efter behov */
+    height: auto;       /* Bevarar bildens proportioner */
+}
+
+.float-right-image-2 {
+    float: right;       /* Gör att bilden flyter till höger */
+    padding-right: 40px;
+    padding-left: 15px;
+    margin: 0 0 15px 15px; /* Lägger en marginal mellan texten och bilden */
+    width: 400px;       /* Justera bildens bredd efter behov */
+    height: auto;       /* Bevarar bildens proportioner */
+}
+
+.float-right-image-2 img {
+    width: 100%;        /* Gör att bilden tar upp hela bredden på figuren */
+    height: auto;       /* Bevarar bildens proportioner */
+}
+
+.float-right-image-2 figcaption {
+    text-align: left; /* Bildtexten till vänster under bilden */
+    margin-top: 10px;   /* Lägg till lite avstånd ovanför bildtexten */
+    font-style: italic; /* Gör texten kursiv (valfritt) */
+}
+
+.absolute-right-image {
+    position: absolute;
+    right: 40px; /* Bilden placeras 40px från högerkanten */
+    top: 150px;   /* Du kan justera detta beroende på var du vill att bilden ska börja */
+    width: 320px; /* Justera storleken efter behov */
+    height: auto; /* Bevarar bildens proportioner */
+}
+
+@media (max-width: 768px) {
+    .right-image {
+        float: none; /* Tar bort float på små skärmar */
+        display: block;
+        margin: 0 auto; /* Centrerar bilden */
+        width: 100%; /* Gör bilden fullbredd */
+    }
+}
+
+@media (max-width: 768px) {
+    .float-right-image {
+        float: none;    /* Bilden flyter inte längre på små skärmar */
+        width: 100%;    /* Gör bilden fullbredd på mindre skärmar */
+        margin: 0 auto; /* Centrerar bilden */
+    }
+}
+
+@media (max-width: 768px) {
+    .absolute-right-image {
+        position: static; /* Bilden återgår till flödet */
+        width: 100%;      /* Gör bilden fullbredd */
+        margin: 0 auto;   /* Centrerar bilden */
+    }
+    .content-container{
+        padding-right: 0; /* Tar bort det extra utrymmet på högerkanten */
+    }
+}
+
+.gallery {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        max-width: 90%;
+    }
 }
 
 .hero {
@@ -66,11 +210,13 @@ nav ul li a:hover {
 
 .hero-text h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
 }
 
 .hero-text p {
     font-size: 1.2em;
+    color: #FFFFFF;
 }
 
 .hero-text {
@@ -82,11 +228,18 @@ nav ul li a:hover {
     to { opacity: 1; }
 }
 
+.wishlist li {
+    line-height: 1.0; /* Ökar radavståndet mellan varje <li> */
+    margin-bottom: 10px; /* Skapar extra utrymme under varje punkt om du vill ha ännu mer luft */
+}
+
+
 footer {
-    background-color: #f8f8f8;
+    background: linear-gradient(90deg, #A3B5A2, #DDE4D3 );
     text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #e7e7e7;
+    padding: 20px 0;
+    border-bottom: 1px solid #e7e7e7;
+    color: #050000;
 }
 
 /* Responsive Design */

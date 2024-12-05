@@ -22,49 +22,46 @@
 
     <main>
         <h1>Önskelista</h1>
-        <p>Vi har skapat en önskelista för att göra det enkelt för er att hitta den perfekta presenten till oss. Hör av er till våra Toastmasters om ni har frågor!</p>
+        <p>Vi har skapat en önskelista för att göra det enkelt för er att hitta den perfekta presenten till oss. Hör av er till våra Toastmasters om ni har frågor! Mejl: toastmasters.lisaochoscar@gmail.com</p>
+        
         <br>
-        <h2>Prisklass dyr</h2>
-        <ul>
+        <h2>Reservationslista</h2>
+        <p>Följ länken nedan för att komma till Presentlistan.nu, där du kan reservera de presenter du har tänkt att ge oss.</p>
+        <a href="https://presentlistan.nu/C483C6/" target="_blank"><h3>🔗Länk till reservationslista🔗</h3></a>
+        <br>
+        <h2>Reserverbara presenter</h2>
+        <ul class="wishlist">
             <li id="item3">
                 <a href="https://www.google.com/search?q=hackmann+savonia&oq=hackmann+savonia&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQABgKGIAEMgkIAhAAGAoYgAQyCQgDEAAYChiABDIJCAQQABgKGIAEMgkIBRAAGAoYgAQyCQgGEAAYChiABDIJCAcQABgKGIAEMggICBAAGBYYHjIICAkQABgWGB7SAQgyMzk0ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#fpr=r" target="_blank">Bestick Hackman Savonia, 12 set</a>
-           <button onclick="reserveItem('item3')">Reservera</button> 
-            </li>
-            <li id="item4">
-                Glaskonst från Skruf, Kosta Boda, Mönsterås eller Orrefors
-                <button onclick="reserveItem('item4')">Reservera</button>
-            </li>
-            <li id="item5">
-                Tallrik Iittala Sarjaton (utgågna, så kan vara svåra att hitta). Önskar 6 små skålar och 6 st stora tallrikar
-            <button onclick="reserveItem('item5')">Reservera</button>
             </li>
             <li id="item6">
-                <a href="https://skrufsglasbruk.se/product/skruf-whiskyglas/" target="_blank">Skruf Whiskeyglas, 2-4 st</a>
-                <button onclick="reserveItem('item6')">Reservera</button>
+                <a href="https://skrufsglasbruk.se/product/skruf-whiskyglas/" target="_blank">Skruf Whiskeyglas, 4 st</a>
             </li>
             <li id="item7">
-                <a href="https://skrufsglasbruk.se/product/skruf-olglas-stor/" target="_blank">Skruf stora ölglas, 4-6 st</a>
-                <button onclick="reserveItem('item7')">Reservera</button>
+                <a href="https://skrufsglasbruk.se/product/skruf-olglas-stor/" target="_blank">Skruf stora ölglas, 6 st</a>
             </li>
-        </ul>
-<br>
-        <h2>Prisklass mellan</h2>
-        <ul>
             <li id="item1">
-                <a href="https://www.iittala.com/sv-se/dukning/tallrikar-och-skalar/tallrikar/swedish-grace-tallrik-djup-19-cm-ang-1011902" target=_blank >Swedish Grace Djup 19 cm Äng, 12 st</a>
-                <button onclick="reserveItem('item1')">Reservera</button>
-                <button onclick="resetItem('item1')" style="display:none;">Återställ</button> <!-- Återställ-knapp som inte syns från början -->
+                <a href="https://www.iittala.com/sv-se/dukning/tallrikar-och-skalar/tallrikar/swedish-grace-tallrik-djup-19-cm-ang-1011902" target=_blank>Swedish Grace Djup 19 cm Äng, 12 st</a>
             </li>
             <li id="item2">
                 <a href="https://www.iittala.com/sv-se/dukning/tallrikar-och-skalar/tallrikar/swedish-grace-tallrik-17-cm-ang-1011904" target=_blank >Swedish Grace Tallrik 17 cm Äng, 12 st</a>
-                <button onclick="reserveItem('item2')">Reservera</button>
             </li>
+            <li>Köksknivar och knivställ</li>
+            <li>Elvisp</li>
+            <li>Gjutjärnspanna</li>
         </ul>
 <br>
-        <h2>Prisklass valfri</h2>
-        <ul>
+        <h2>Fler förslag på presenter</h2>
+        <p>Som många vet sysslar brudparet med alla möjliga aktiviteter inom friluftsliv, hemvärn, hästar och träning. Att ge dem presentkort eller en summa pengar dedikerade till någon av deras favoritsysslor hade varit en mycket fin present.</p>
+        <ul class="wishlist">
             <li>Presentkort till byggverktyg</li>
             <li>Presentkort till friluftskläder</li>
+            <li>Donationer till Ukraina</li>
+            <li>Glaskonst från Skruf, Kosta Boda, Mönsterås eller Orrefors</li>
+            <li> Tallrik Iittala Sarjaton (utgågna, så kan vara svåra att hitta). Önskar 6 st stora tallrikar</li>
+        <br>
+        <li>Lisa har nyligen tagit motorsågskörkortet och behöver köpa in skyddsutrustning för detta. Öronmärkta pengar till detta hade hon uppskattat!</li>
+        <li>Oscar satsar för fullt på att tävla i styrkelyft. Han önskar därmed pengar till träningsutrustning och licensavgifter.</li>
         </ul>
     </main>
 
@@ -72,79 +69,5 @@
     </footer>
 
 </body>
-
-<script>
-    // Kollar om ett objekt är reserverat vid laddning av sidan
-    document.addEventListener("DOMContentLoaded", function() {
-        checkReservations();
-    });
-
-    // Funktion för att reservera ett objekt och visa återställ-knappen
-    function reserveItem(itemId) {
-        let isReserved = localStorage.getItem(itemId);
-
-        if (!isReserved) {
-            localStorage.setItem(itemId, 'reserved');
-            
-            // Visa "reserverad"-texten och inaktivera knappen
-            document.getElementById(itemId).innerHTML += ' <span style="color: red;">(Reserverad)</span>';
-            let buttons = document.getElementById(itemId).querySelectorAll('button');
-            let paxaButton = buttons[0]; // Första knappen är "Paxa"
-            let resetButton = buttons[1]; // Andra knappen är "Återställ"
-            
-            paxaButton.disabled = true;
-            paxaButton.innerText = 'Reserverad';
-    
-            // Visa återställ-knappen
-            resetButton.style.display = 'inline';
-        }
-    }
-
-    // Funktion för att återställa ett objekt och dölja återställ-knappen
-    function resetItem(itemId) {
-        localStorage.removeItem(itemId);
-    
-        // Återställ knappen och texten
-        let listItem = document.getElementById(itemId);
-        let buttons = listItem.querySelectorAll('button');
-        let paxaButton = buttons[0]; // Första knappen är "Paxa"
-        let resetButton = buttons[1]; // Andra knappen är "Återställ"
-
-        paxaButton.disabled = false;
-        paxaButton.innerText = 'Reservera';
-    
-        // Ta bort "(Reserverad)"-texten om den finns
-        let reservedText = listItem.querySelector('span');
-        if (reservedText) {
-            reservedText.remove();
-        }
-    
-        // Dölj återställ-knappen igen
-        resetButton.style.display = 'none';
-    }
-
-    // Kollar vilka objekt som är reserverade och uppdaterar gränssnittet
-    function checkReservations() {
-        let items = ['item1', 'item2']; // Lägg till alla item-ID:n du vill kolla
-
-        items.forEach(function(item) {
-            let isReserved = localStorage.getItem(item);
-
-            if (isReserved) {
-                // Om objektet är reserverat, visa det i gränssnittet
-                document.getElementById(item).innerHTML += ' <span style="color: red;">(Reserverad)</span>';
-                let buttons = document.getElementById(item).querySelectorAll('button');
-                let paxaButton = buttons[0]; // Första knappen är "Paxa"
-                let resetButton = buttons[1]; // Andra knappen är "Återställ"
-
-                paxaButton.disabled = true;
-                paxaButton.innerText = 'Reserverad';
-    
-                // Visa återställ-knappen
-                resetButton.style.display = 'inline';
-            }
-        });
-    }
-</script>
 
 </html>
