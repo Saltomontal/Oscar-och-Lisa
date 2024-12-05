@@ -31,7 +31,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #007BFF;
+    color: #a94a85;
 }
 
 .hero {
@@ -39,7 +39,7 @@ nav ul li a:hover {
     background-image: url('../images/bakgrund.jpg');
     background-size: cover; /* Gör så att bilden täcker hela sektionen */
     background-position: center; /* Centrerar bilden */
-    height: 60vh; /* Justera höjden efter behov */
+    height: 90vh; /* Justera höjden efter behov */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,6 +71,15 @@ nav ul li a:hover {
 
 .hero-text p {
     font-size: 1.2em;
+}
+
+.hero-text {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 footer {

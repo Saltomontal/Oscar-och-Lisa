@@ -21,8 +21,8 @@
 
     <main>
         <h1>Om Kråksjö Västergård</h1>
-        <p>Kråksjö Västergård är den vackra platsen där vi kommer att fira vårt bröllop. Här är lite information om platsen:</p>
-        <h2>Historia</h2>
+        <p>Kråksjö Västergård är den vackra plats där vi kommer att fira vårt bröllop. Här är lite information om platsen:</p>
+        <h2>Gården köptes av Lisas farfars farfar, Gottfrid, efter att han återvandrat till Småland från Amerika med pengar från sitt jobb som järnvägsrallare. Gården har sedan 1800-talet varit i familjens ägo.</h2>
         <p>[Beskrivning av platsens historia]</p>
         <h2>Faciliteter</h2>
         <p>[Beskrivning av faciliteter och vad som erbjuds]</p>
@@ -34,8 +34,6 @@
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 [Era Namn]. Alla rättigheter förbehållna.</p>
-    </footer>
+    
 </body>
 </html>
